@@ -11,7 +11,7 @@ const Pages: FC = (): ReactElement => {
         <Layout style={{minHeight: '100vh'}}>
             <Sider>
                 <Menu style={{height:'100%'}}>
-                    {menu.map((item, index) => <Item key={index}><Link to={`/pages${item.url}`}>{item.title}</Link></Item>)}
+                    {menu.map((item, index) => <Item key={index}><Link to={item.url}>{item.title}</Link></Item>)}
                 </Menu>
             </Sider>
             <Content>
