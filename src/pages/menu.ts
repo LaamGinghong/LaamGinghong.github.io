@@ -1,9 +1,9 @@
-import {FC, lazy, LazyExoticComponent} from 'react';
+import {ComponentClass, ComponentState, FC, lazy, LazyExoticComponent} from 'react';
 
 interface Menu {
     title: string
     url: string
-    component?: LazyExoticComponent<FC>
+    component: LazyExoticComponent<FC> | LazyExoticComponent<ComponentClass<ComponentState>>,
 }
 
 export const menu: Menu[] = [
