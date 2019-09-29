@@ -7,5 +7,6 @@ interface Menu {
 }
 
 export const menu: Menu[] = [
-    {title: 'useState', url: '/useState', component: lazy(() => import('./use-state'))}
+    {title: 'useState', url: '/useState', component: lazy(() => import('./use-state'))},
+    {title: 'useEffect', url: '/useEffect', component: lazy(() => import('./use-effect'))}
 ];

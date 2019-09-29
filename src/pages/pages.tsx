@@ -1,4 +1,4 @@
-import React, {FC, ReactElement,Suspense} from 'react';
+import React, {FC, ReactElement, Suspense} from 'react';
 import {Route, Switch, Link, Redirect} from 'react-router-dom';
 import {Layout, Menu} from 'antd';
 import {menu} from './menu';
@@ -10,11 +10,11 @@ const Pages: FC = (): ReactElement => {
     return (
         <Layout style={{minHeight: '100vh'}}>
             <Sider>
-                <Menu style={{height:'100%'}}>
+                <Menu style={{height: '100%'}}>
                     {menu.map((item, index) => <Item key={index}><Link to={item.url}>{item.title}</Link></Item>)}
                 </Menu>
             </Sider>
-            <Content>
+            <Content style={{padding: '12px 20px'}}>
                 <Suspense fallback={<div>Loading...</div>}>
                     <Switch>
                         <Route path='/' exact render={() => <Redirect to='/useState'/>}/>
