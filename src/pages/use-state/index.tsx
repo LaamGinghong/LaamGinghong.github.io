@@ -20,7 +20,7 @@ const UseState: FC = (): ReactElement => {
     };
 
     const handleClick = (): void => {
-        message.info(`The current value is ${value ? value : null} !`);
+        message.info(`The current value is ${value ? value : 'null'} !`);
     };
 
     useEffect(() => {
@@ -31,22 +31,22 @@ const UseState: FC = (): ReactElement => {
 
     return (
         <>
-            <Row type="flex" gutter={5}>
+            <Row type='flex' gutter={5}>
                 <Col span={4}>
                     <Input
                         value={value}
                         onChange={handleInputChange}
-                        placeholder="Please enter the value !"
+                        placeholder='Please enter the value !'
                     />
                 </Col>
                 <Col>
-                    <Button type="primary" onClick={handleClick}>
+                    <Button type='primary' onClick={handleClick}>
                         Button
                     </Button>
                 </Col>
             </Row>
             <br/>
-            <Alert message={info} type="info"/>
+            <Alert message={info} type='info'/>
             <br/>
             <div>
                 <ReactMarkdown source={markdown} renderers={{code: CodeBlock}}/>

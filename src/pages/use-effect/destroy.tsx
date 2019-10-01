@@ -3,7 +3,7 @@ import {Alert, Button} from 'antd';
 
 
 interface Props {
-    changeCount(count: number): void
+    changeCount(count: number): void;
 }
 
 let timer: NodeJS.Timer;

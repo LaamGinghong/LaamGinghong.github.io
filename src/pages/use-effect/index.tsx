@@ -39,7 +39,8 @@ const UseEffect = withRouter((props: RouteComponentProps): ReactElement => {
             <Description/>
             <Card style={{marginTop: '20px'}} tabList={title} activeTabKey={key} onTabChange={changeTab}>
                 <Route exact path='/useEffect' render={() => <Redirect to='/useEffect/common'/>}/>
-                {Object.entries(content).map(([key, value]) => <Route key={key} path={`/useEffect/${key}`} component={value}/>)}
+                {Object.entries(content).map(([key, value]) => <Route key={key} path={`/useEffect/${key}`}
+                                                                      component={value}/>)}
             </Card>
         </>
     );

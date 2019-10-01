@@ -3,16 +3,19 @@ import SyntaxHighlighter from 'react-syntax-highlighter';
 import {monokai} from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
 interface Props {
-    value: string
-    language: string
+    value: string;
+    language: string;
 }
 
 class CodeBlock extends PureComponent<Props> {
-    static defaultProps = {
-        language: null
+    public static defaultProps = {
+        language: undefined
     };
 
-    render(): React.ReactElement<any, string | React.JSXElementConstructor<any>> | string | number | {} | React.ReactNodeArray | React.ReactPortal | boolean | null | undefined {
+    public render():
+        React.ReactElement<any, string |
+        React.JSXElementConstructor<any>> | string
+        | number | {} | React.ReactNodeArray | React.ReactPortal | boolean | null | undefined {
         const {language, value} = this.props;
         return <SyntaxHighlighter style={monokai} language={language}>
             {value}
