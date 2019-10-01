@@ -40,8 +40,8 @@
     "no-duplicate-super": true,
     "no-empty": true,
     "no-eval": true,
-    "no-for-in-array": true,
     "no-invalid-template-strings": true,
+    "no-for-in-array": true,
     "no-invalid-this": true,
     "no-null-keyword": true,
     "no-sparse-arrays": true,
@@ -49,7 +49,6 @@
     "no-switch-case-fall-through": true,
     "no-unsafe-finally": true,
     "no-unused-expression": true,
-    "no-use-before-declare": true,
     "no-var-keyword": true,
     "radix": true,
     "restrict-plus-operands": true,
@@ -77,14 +76,9 @@
       120
     ],
     "no-duplicate-imports": true,
-    "align": [
-      true,
-      "parameters",
-      "arguments",
-      "statements",
-      "members",
-      "elements"
-    ],
+    "no-require-imports": true,
+    "arrow-parens": false,
+    "ordered-imports": false,
     "array-type": [
       true,
       "array"
@@ -96,10 +90,9 @@
     ],
     "encoding": true,
     "import-spacing": true,
-    "interface-name": [
-      true,
-      "always-prefix"
-    ],
+    "interface-name": false,
+    "object-literal-sort-keys": false,
+    "no-shadowed-variable": false,
     "jsdoc-format": true,
     "new-parens": true,
     "no-consecutive-blank-lines": [
@@ -117,9 +110,20 @@
       "check-format",
       "allow-leading-underscore",
       "allow-trailing-underscore",
+      "allow-pascal-case",
       "ban-keywords"
-    ]
-  }
-},
-"rulesDirectory": []
+    ],
+    "quotemark": [
+      true,
+      "single",
+      "jsx-single"
+    ],
+    "semicolon": [
+      true,
+      "always"
+    ],
+    "trailing-comma": false
+  },
+  "rulesDirectory": []
 }
+
