@@ -9,5 +9,6 @@ interface Menu {
 export const menu: Menu[] = [
     {title: 'useState', url: '/useState', component: lazy(() => import('./use-state'))},
     {title: 'useEffect', url: '/useEffect', component: lazy(() => import('./use-effect'))},
-    {title: 'useContext', url: '/useContext', component: lazy(() => import('./use-context'))}
+    {title: 'useContext', url: '/useContext', component: lazy(() => import('./use-context'))},
+    {title: 'useReducer', url: '/useReducer', component: lazy(() => import('./use-reducer'))}
 ];

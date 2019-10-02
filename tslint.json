@@ -106,12 +106,7 @@
     ],
     "no-unnecessary-initializer": true,
     "variable-name": [
-      true,
-      "check-format",
-      "allow-leading-underscore",
-      "allow-trailing-underscore",
-      "allow-pascal-case",
-      "ban-keywords"
+      false
     ],
     "quotemark": [
       true,
