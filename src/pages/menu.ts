@@ -11,5 +11,6 @@ export const menu: Menu[] = [
     {title: 'useEffect', url: '/useEffect', component: lazy(() => import('./use-effect'))},
     {title: 'useContext', url: '/useContext', component: lazy(() => import('./use-context'))},
     {title: 'useReducer', url: '/useReducer', component: lazy(() => import('./use-reducer'))},
-    {title: 'useCallback', url: '/useCallback', component: lazy(() => import('./use-callback'))}
+    {title: 'useCallback', url: '/useCallback', component: lazy(() => import('./use-callback'))},
+    {title: 'useMemo', url: '/useMemo', component: lazy(() => import('./use-memo'))}
 ];
