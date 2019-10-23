@@ -1,6 +1,7 @@
 import React, {PureComponent} from 'react';
-import SyntaxHighlighter from 'react-syntax-highlighter';
-import {monokai} from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import {PrismLight} from 'react-syntax-highlighter';
+import {xonokai} from 'react-syntax-highlighter/dist/esm/styles/prism';
+import tsx from 'react-syntax-highlighter/dist/esm/languages/prism/tsx';
 
 interface Props {
     value: string;
@@ -8,18 +9,21 @@ interface Props {
 }
 
 class CodeBlock extends PureComponent<Props> {
-    public static defaultProps = {
-        language: undefined
-    };
+
+    constructor(props: Props) {
+        super(props);
+        PrismLight.registerLanguage('tsx', tsx);
+    }
+
 
     public render():
         React.ReactElement<any, string |
-        React.JSXElementConstructor<any>> | string
+            React.JSXElementConstructor<any>> | string
         | number | {} | React.ReactNodeArray | React.ReactPortal | boolean | null | undefined {
-        const {language, value} = this.props;
-        return <SyntaxHighlighter style={monokai} language={language}>
+        const {value, language} = this.props;
+        return <PrismLight language={language} style={xonokai}>
             {value}
-        </SyntaxHighlighter>;
+        </PrismLight>;
     }
 }
 
