@@ -18,5 +18,6 @@ export const menu: Menu[] = [
         title: 'useImperativeHandle',
         url: '/useImperativeHandle',
         component: lazy(() => import('./use-imperative-handle'))
-    }
+    },
+    {title: 'useLayoutEffect', url: '/useLayoutEffect', component: lazy(() => import('./use-layout-effect'))}
 ];
