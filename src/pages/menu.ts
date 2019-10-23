@@ -13,5 +13,10 @@ export const menu: Menu[] = [
     {title: 'useReducer', url: '/useReducer', component: lazy(() => import('./use-reducer'))},
     {title: 'useCallback', url: '/useCallback', component: lazy(() => import('./use-callback'))},
     {title: 'useMemo', url: '/useMemo', component: lazy(() => import('./use-memo'))},
-    {title: 'useRef', url: '/useRef', component: lazy(() => import('./use-ref'))}
+    {title: 'useRef', url: '/useRef', component: lazy(() => import('./use-ref'))},
+    {
+        title: 'useImperativeHandle',
+        url: '/useImperativeHandle',
+        component: lazy(() => import('./use-imperative-handle'))
+    }
 ];
